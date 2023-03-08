@@ -13,7 +13,7 @@ class BtnGroupWidget(QWidget):
 
     def setup_ui(self):
         # 加载样式表文件
-        file = QFile("app.qss")
+        file = QFile("./qss/app.qss")
         file.open(QFile.ReadOnly | QFile.Text)
         stylesheet = file.readAll().data().decode('utf-8')
         layout = QHBoxLayout()
@@ -66,7 +66,7 @@ class BtnGroupWidget(QWidget):
         layout_widget.setLayout(layout)
         layout_widget.move(0, 0)
         layout_widget.setFixedHeight(64)
-        layout_widget.setStyleSheet("background-color: red;")
+        layout_widget.setStyleSheet("background-color: white;")
 
         # 将新空间添加到窗口中
         main_layout = QHBoxLayout()

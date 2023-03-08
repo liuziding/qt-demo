@@ -1,12 +1,12 @@
-QPushButton#top_btn_group {
+QPushButton#main_nav_btn {
     background-color: #FFF;
     border: 1px solid #DEDEDE;
-    padding: 4px 14px;
+    padding: 2px 20px;
     border-radius: 6px;
 }
 
 
-QPushButton#top_btn_group:hover {
+QPushButton#main_nav_btn:hover {
     border: 1px solid #476dbe;
     color: #476dbe;
 }

@@ -10,3 +10,22 @@ QPushButton#main_nav_btn:hover {
     border: 1px solid #476dbe;
     color: #476dbe;
 }
+
+
+
+
+QLabel#main_video_label {
+    border: 2px solid #D7D7D7;
+}
+
+QPushButton#main_video_button {
+    background-color: #FFF;
+    border: 1px solid #DEDEDE;
+    padding: 2px 20px;
+    border-radius: 6px;
+}
+
+QPushButton#main_video_button:hover {
+    border: 1px solid #476dbe;
+    color: #476dbe;
+}

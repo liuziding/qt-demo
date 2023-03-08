@@ -69,16 +69,49 @@ class MyMainWidget(QWidget):
         top_layout.addWidget(refresh_video_button)
         top_layout.addStretch()
 
-        # 创建一个QWidget来显示QGridLayout
-        bottom_widget = QWidget()
-
-
         # 将QHBoxLayout设置为top_widget的布局
         top_widget.setLayout(top_layout)
 
+        # 创建一个QWidget来显示QGridLayout
+        bottom_widget = QWidget()
+
         for i in range(0, self.widget_count):
-            label = QLabel("Label", self)
+            label = QLabel("", self)
             label.setStyleSheet("border: 2px solid #D7D7D7;")
+            label.setObjectName("main_video_label")
+            h_video_label = QHBoxLayout()
+            h_video_label.setSpacing(6)
+            stop_button = self.MyPushButton("Stop", "main_video_button")
+            set_lines_button = self.MyPushButton("Set_Lines", "main_video_button")
+            set_area_button = self.MyPushButton("Set_Area", "main_video_button")
+            start_button = self.MyPushButton("Start", "main_video_button")
+            export_button = self.MyPushButton("Export", "main_video_button")
+            detail_button = self.MyPushButton("Detail", "main_video_button")
+
+            stop_button.setStyleSheet(stylesheet)
+            set_lines_button.setStyleSheet(stylesheet)
+            set_area_button.setStyleSheet(stylesheet)
+            start_button.setStyleSheet(stylesheet)
+            export_button.setStyleSheet(stylesheet)
+            detail_button.setStyleSheet(stylesheet)
+
+            h_video_label.addStretch()
+            h_video_label.addWidget(stop_button)
+            h_video_label.addWidget(set_lines_button)
+            h_video_label.addWidget(set_area_button)
+            h_video_label.addWidget(start_button)
+            h_video_label.addWidget(export_button)
+            h_video_label.addWidget(detail_button)
+            h_video_label.addStretch()
+
+            v_video_layout = QVBoxLayout()
+            btn_v = QPushButton("按钮")
+            v_video_layout.addWidget(btn_v)
+            v_video_layout.addStretch(1)
+            v_video_layout.addLayout(h_video_label)
+
+            label.setLayout(v_video_layout)
+
             grid_layout.addWidget(label, i // self.column_count, i % self.column_count)
 
         # 将QGridLayout设置为bottom_widget的布局
@@ -92,6 +125,10 @@ class MyMainWidget(QWidget):
         main_layout.addWidget(bottom_widget)
         self.setLayout(main_layout)
 
+    def MyPushButton(self, text, className):
+            btn = QPushButton(text)
+            btn.setObjectName(className)
+            return btn
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)

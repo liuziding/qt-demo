@@ -79,8 +79,10 @@ class MyMainWidget(QWidget):
             label = QLabel("", self)
             label.setStyleSheet("border: 2px solid #D7D7D7;")
             label.setObjectName("main_video_label")
-            h_video_label = QHBoxLayout()
-            h_video_label.setSpacing(6)
+            v_video_layout = QVBoxLayout()
+            h_video_layout = QHBoxLayout()
+            h_btn_label = QHBoxLayout()
+            h_btn_label.setSpacing(6)
             stop_button = self.MyPushButton("Stop", "main_video_button")
             set_lines_button = self.MyPushButton("Set_Lines", "main_video_button")
             set_area_button = self.MyPushButton("Set_Area", "main_video_button")
@@ -95,20 +97,62 @@ class MyMainWidget(QWidget):
             export_button.setStyleSheet(stylesheet)
             detail_button.setStyleSheet(stylesheet)
 
-            h_video_label.addStretch()
-            h_video_label.addWidget(stop_button)
-            h_video_label.addWidget(set_lines_button)
-            h_video_label.addWidget(set_area_button)
-            h_video_label.addWidget(start_button)
-            h_video_label.addWidget(export_button)
-            h_video_label.addWidget(detail_button)
-            h_video_label.addStretch()
+            h_btn_label.addStretch()
+            h_btn_label.addWidget(stop_button)
+            h_btn_label.addWidget(set_lines_button)
+            h_btn_label.addWidget(set_area_button)
+            h_btn_label.addWidget(start_button)
+            h_btn_label.addWidget(export_button)
+            h_btn_label.addWidget(detail_button)
+            h_btn_label.addStretch()
 
-            v_video_layout = QVBoxLayout()
-            btn_v = QPushButton("按钮")
-            v_video_layout.addWidget(btn_v)
-            v_video_layout.addStretch(1)
-            v_video_layout.addLayout(h_video_label)
+            image_label = QLabel()
+            pixmap = QPixmap("icons/1.jpg")
+            pixmap_w = pixmap.width()
+            pixmap_h = pixmap.height()
+            image_w = image_label.width()
+            image_h = image_label.height()
+            ratio_w = pixmap_w / image_w
+            ratio_h = pixmap_h / image_h
+            print((pixmap.width() / ratio_w - 20))
+            print((pixmap.height() / ratio_w - 44))
+            new_pixmap = None
+            if ratio_w > ratio_h:
+                new_pixmap = pixmap.scaled((pixmap.width() / ratio_w - 20), (pixmap.height() / ratio_w - 44))
+            else:
+                new_pixmap = pixmap.scaled((pixmap.width() / ratio_h - 20), (pixmap.height() / ratio_h - 20))
+            
+            print(image_label.width())
+            print(image_label.height())
+            image_label.setAlignment(Qt.AlignCenter)
+            image_label.setPixmap(new_pixmap)
+            # label.setStyleSheet("border: 1px solid red;")
+            splitter_H = QSplitter(Qt.Horizontal)
+            print(splitter_H.width())
+            print(splitter_H.height())
+            h_video_layout.addWidget(splitter_H)
+            splitter_H.addWidget(image_label)
+
+            # v_video_layout = QVBoxLayout()
+            # btn_v = QPushButton("按钮")
+            # v_video_layout.addWidget(h_video_layout)
+            v_video_layout.addLayout(h_video_layout)
+            # v_video_layout.addStretch(1)
+            v_video_layout.addLayout(h_btn_label)
+
+
+            # v_video_layout.addWidget(graphicsview)
+
+            # video_show_label.setLayout(graphicsview)
+            # rect_widget = QWidget()
+            # rect_label = QLabel(self)
+            # pixmap = QPixmap("icons/1.jpg")
+            # new_pixmap = pixmap.scaled(pixmap.width() // 10, pixmap.height() // 10)
+            # rect_label.setPixmap(new_pixmap)
+
+            # # v_video_layout.addWidget(video_show_label)
+            # # v_video_layout.addStretch(0)
+            # v_video_layout.addWidget(rect_label)
 
             label.setLayout(v_video_layout)
 

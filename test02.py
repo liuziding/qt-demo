@@ -5,6 +5,8 @@ from PySide6.QtGui import *
 from PySide6.QtCore import *
 
 from components.mainNavWidget import MainNavWidget
+from components.line.subLineView import SubLineView
+from components.line.subAreaView import SubAreaView
 
 class MyMainWidget(QWidget):
     def __init__(self):
@@ -154,6 +156,9 @@ class MyMainWidget(QWidget):
             # # v_video_layout.addStretch(0)
             # v_video_layout.addWidget(rect_label)
 
+            set_lines_button.clicked.connect(lambda: self.setLine_clicked(i))
+            set_area_button.clicked.connect(lambda: self.setArea_clicked(i))
+
             label.setLayout(v_video_layout)
 
             grid_layout.addWidget(label, i // self.column_count, i % self.column_count)
@@ -173,6 +178,23 @@ class MyMainWidget(QWidget):
             btn = QPushButton(text)
             btn.setObjectName(className)
             return btn
+    
+    def setLine_clicked(self, index):
+        line_win = SubLineView()
+        line_win.line_signal.connect(self.setLine_text)
+        line_win.exec()
+
+    def setLine_text(self, chosen_line):
+        pass
+
+    def setArea_clicked(self, index):
+        area_win = SubAreaView()
+        area_win.area_signal.connect(self.setArea_text)
+        area_win.exec()
+
+    def setArea_text(self):
+        pass
+
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)

@@ -1,10 +1,4 @@
-/* 公共样式开始 */
-QPushButton#nav_bar_btn {
-    background-color: #FFF;
-    border: 1px solid #DEDEDE;
-    padding: 2px 20px;
-    border-radius: 6px;
-}
+
 /* 公共样式结束 */
 
 QPushButton#main_nav_btn {
@@ -20,12 +14,6 @@ QPushButton#main_nav_btn:hover {
     color: #476dbe;
 }
 
-
-
-
-QLabel#main_video_label {
-    border: 2px solid #D7D7D7;
-}
 
 QPushButton#main_video_button {
     background-color: #FFF;

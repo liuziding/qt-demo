@@ -5,7 +5,7 @@ from PySide6.QtWidgets import (QGraphicsView, QDialog, QGraphicsScene, QGraphics
 from PySide6.QtGui import Qt, QPen, QBrush, QPixmap
 from PySide6.QtCore import Signal
 
-from components.model.polygon_ui import Ui_SubWindow
+from ui.polygon_ui import Ui_SubWindow
 from utils.commonhelper import CommonHelper
 
 area_point = [] # 将点的坐标储存进此数组中

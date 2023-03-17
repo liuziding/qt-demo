@@ -5,8 +5,8 @@ from PySide6.QtWidgets import (QGraphicsView, QDialog, QGraphicsScene, QGraphics
 from PySide6.QtGui import Qt, QPen, QBrush, QPixmap, QImage
 from PySide6.QtCore import Signal, QRect
 
-from ..ui.polygon_ui import Ui_SubWindow
-from ..utils.commonhelper import CommonHelper
+from ui.polygon_ui import Ui_SubWindow
+from utils.commonhelper import CommonHelper
 
 chosen_points = [] # 将点的坐标储存进此数组中
 
@@ -43,7 +43,7 @@ class SubLineView(QDialog, Ui_SubWindow):
         lay = QVBoxLayout(self.line_label)
         lay.addWidget(self.graphicsview)
 
-        pixmap = QPixmap("../images/inside.jpg")
+        pixmap = QPixmap("images/inside.jpg")
         print(pixmap.width())
         print(pixmap.height())
         new_pixmap = pixmap.scaled(pixmap.width() // 2, pixmap.height() // 2)

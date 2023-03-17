@@ -142,7 +142,13 @@
 	background: #fff;
 	border-radius: 6px;
 	border: 1px solid #BEBEBE;
-}</string>
+}
+QWidget#loadVideoButton:hover {
+	border: 1px solid #476dbe;
+	background: #476dbe;
+    color: #FFF;
+}
+</string>
              </property>
              <property name="text">
               <string>Load Video</string>
@@ -196,6 +202,11 @@
 	background: #fff;
 	border-radius: 6px;
 	border: 1px solid #BEBEBE;
+}
+QWidget#setLinesButton:hover {
+	border: 1px solid #476dbe;
+	background: #476dbe;
+    color: #FFF;
 }</string>
              </property>
              <property name="text">
@@ -250,6 +261,11 @@
 	background: #fff;
 	border-radius: 6px;
 	border: 1px solid #BEBEBE;
+}
+QWidget#setAreaButton:hover {
+	border: 1px solid #476dbe;
+	background: #476dbe;
+    color: #FFF;
 }</string>
              </property>
              <property name="text">
@@ -331,11 +347,19 @@
                     <height>32</height>
                    </size>
                   </property>
+                  <property name="cursor">
+                   <cursorShape>PointingHandCursor</cursorShape>
+                  </property>
                   <property name="styleSheet">
                    <string notr="true">QWidget#startButton {
 	background: #fff;
 	border-radius: 6px;
 	border: 1px solid #BEBEBE;
+}
+QWidget#startButton:hover {
+	border: 1px solid #476dbe;
+	background: #476dbe;
+    color: #FFF;
 }</string>
                   </property>
                   <property name="text">
@@ -370,11 +394,19 @@
                     <height>32</height>
                    </size>
                   </property>
+                  <property name="cursor">
+                   <cursorShape>PointingHandCursor</cursorShape>
+                  </property>
                   <property name="styleSheet">
                    <string notr="true">QWidget#stopButton {
 	background: #fff;
 	border-radius: 6px;
 	border: 1px solid #BEBEBE;
+}
+QWidget#stopButton:hover {
+	border: 1px solid #476dbe;
+	background: #476dbe;
+    color: #FFF;
 }</string>
                   </property>
                   <property name="text">

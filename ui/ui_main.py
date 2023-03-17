@@ -84,7 +84,13 @@ class Ui_MainWindow(object):
 "	background: #fff;\n"
 "	border-radius: 6px;\n"
 "	border: 1px solid #BEBEBE;\n"
-"}")
+"}\n"
+"QWidget#loadVideoButton:hover {\n"
+"	border: 1px solid #476dbe;\n"
+"	background: #476dbe;\n"
+"    color: #FFF;\n"
+"}\n"
+"")
 
         self.horizontalLayout.addWidget(self.loadVideoButton)
 
@@ -112,6 +118,11 @@ class Ui_MainWindow(object):
 "	background: #fff;\n"
 "	border-radius: 6px;\n"
 "	border: 1px solid #BEBEBE;\n"
+"}\n"
+"QWidget#setLinesButton:hover {\n"
+"	border: 1px solid #476dbe;\n"
+"	background: #476dbe;\n"
+"    color: #FFF;\n"
 "}")
 
         self.horizontalLayout_3.addWidget(self.setLinesButton)
@@ -140,6 +151,11 @@ class Ui_MainWindow(object):
 "	background: #fff;\n"
 "	border-radius: 6px;\n"
 "	border: 1px solid #BEBEBE;\n"
+"}\n"
+"QWidget#setAreaButton:hover {\n"
+"	border: 1px solid #476dbe;\n"
+"	background: #476dbe;\n"
+"    color: #FFF;\n"
 "}")
 
         self.horizontalLayout_2.addWidget(self.setAreaButton)
@@ -172,10 +188,16 @@ class Ui_MainWindow(object):
         self.startButton.setObjectName(u"startButton")
         self.startButton.setMinimumSize(QSize(80, 32))
         self.startButton.setMaximumSize(QSize(16777215, 32))
+        self.startButton.setCursor(QCursor(Qt.PointingHandCursor))
         self.startButton.setStyleSheet(u"QWidget#startButton {\n"
 "	background: #fff;\n"
 "	border-radius: 6px;\n"
 "	border: 1px solid #BEBEBE;\n"
+"}\n"
+"QWidget#startButton:hover {\n"
+"	border: 1px solid #476dbe;\n"
+"	background: #476dbe;\n"
+"    color: #FFF;\n"
 "}")
 
         self.horizontalLayout_4.addWidget(self.startButton)
@@ -188,10 +210,16 @@ class Ui_MainWindow(object):
         self.stopButton.setObjectName(u"stopButton")
         self.stopButton.setMinimumSize(QSize(80, 32))
         self.stopButton.setMaximumSize(QSize(80, 32))
+        self.stopButton.setCursor(QCursor(Qt.PointingHandCursor))
         self.stopButton.setStyleSheet(u"QWidget#stopButton {\n"
 "	background: #fff;\n"
 "	border-radius: 6px;\n"
 "	border: 1px solid #BEBEBE;\n"
+"}\n"
+"QWidget#stopButton:hover {\n"
+"	border: 1px solid #476dbe;\n"
+"	background: #476dbe;\n"
+"    color: #FFF;\n"
 "}")
 
         self.horizontalLayout_4.addWidget(self.stopButton)

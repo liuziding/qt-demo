@@ -1,16 +1,17 @@
 import sys
 
-from PySide6.QtWidgets import *
-from PySide6.QtCore import *
-from PySide6.QtGui import *
+from PySide6.QtWidgets import QMainWindow, QStackedWidget, QApplication
+# from PySide6.QtCore import *
+from PySide6.QtGui import QGuiApplication
 
 from components.main import MainPage
-from ui.ui_main import Ui_MainWindow
 
 
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
+        self.resize(1200, 800)
+        self.center()
         self.setup_ui()
 
     def setup_ui(self):
@@ -28,22 +29,25 @@ class MainWindow(QMainWindow):
 
         # 将QStackedWidget添加到窗口中
         self.setCentralWidget(self.widget)
-        
-        
-        # def startClicked(self): # 点击“start”按钮  信号与槽函数
-        #     print("你点击了start按钮")
 
-
-        # self.startButton.clicked.connect(MainWindow.startClicked)
-        # self.stopButton.clicked.connect(MainWindow.stopClicked)
-        # self.setAreaButton.clicked.connect(MainWindow.setAreaClicked)
-        # self.setLinesButton.clicked.connect(MainWindow.setLinesClicked)
-        # self.loadVideoButton.clicked.connect(MainWindow.loadVideoClicked)
+    def center(self):
+        # 获取当前屏幕的尺寸和位置
+        screen = QGuiApplication.screens()[0].availableGeometry()
+        # 获取窗口的尺寸和位置
+        size = self.geometry()
+        # 计算窗口居中的位置
+        print(screen.width())
+        print(screen.height())
+        print(size.width())
+        print(size.height())
+        x = (screen.width() - size.width()) / 2
+        y = (screen.height() - size.height()) / 2
+        # 移动窗口到居中位置
+        self.move(x, y)
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     window = MainWindow()
-    window.resize(1200, 800)
-    window.move(0, 0)
     window.show()
     sys.exit(app.exec())
+

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1142</width>
-    <height>944</height>
+    <width>1157</width>
+    <height>981</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,7 +19,7 @@
 }</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <layout class="QHBoxLayout" name="horizontalLayout_5">
+   <layout class="QVBoxLayout" name="verticalLayout_3">
     <item>
      <layout class="QVBoxLayout" name="verticalLayout">
       <item>
@@ -44,101 +44,105 @@
        </widget>
       </item>
       <item>
-       <widget class="QFrame" name="videoFrame">
+       <widget class="QLabel" name="l_imageArea">
         <property name="minimumSize">
          <size>
-          <width>600</width>
-          <height>400</height>
-         </size>
-        </property>
-        <property name="frameShape">
-         <enum>QFrame::StyledPanel</enum>
-        </property>
-        <property name="frameShadow">
-         <enum>QFrame::Raised</enum>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QFrame" name="frame_2">
-        <property name="minimumSize">
-         <size>
-          <width>0</width>
-          <height>180</height>
-         </size>
-        </property>
-        <property name="maximumSize">
-         <size>
-          <width>167777</width>
-          <height>180</height>
+          <width>400</width>
+          <height>225</height>
          </size>
         </property>
         <property name="styleSheet">
-         <string notr="true">QWidget#frame_2 {
-	border: 0;
-}</string>
-        </property>
-        <property name="frameShape">
-         <enum>QFrame::StyledPanel</enum>
-        </property>
-        <property name="frameShadow">
-         <enum>QFrame::Raised</enum>
-        </property>
-        <layout class="QVBoxLayout" name="verticalLayout_2">
-         <property name="leftMargin">
-          <number>0</number>
-         </property>
-         <property name="topMargin">
-          <number>0</number>
-         </property>
-         <property name="rightMargin">
-          <number>0</number>
-         </property>
-         <property name="bottomMargin">
-          <number>0</number>
-         </property>
-         <item>
-          <layout class="QHBoxLayout" name="horizontalLayout">
-           <item>
-            <widget class="QLineEdit" name="loadVideoLineEdit">
-             <property name="minimumSize">
-              <size>
-               <width>0</width>
-               <height>28</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>16777215</width>
-               <height>28</height>
-              </size>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">QWidget#loadVideoLineEdit {
+         <string notr="true">QWidget#l_imageArea {
 	border: 1px solid #BEBEBE;
 }</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QPushButton" name="loadVideoButton">
-             <property name="minimumSize">
-              <size>
-               <width>110</width>
-               <height>28</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>110</width>
-               <height>28</height>
-              </size>
-             </property>
-             <property name="cursor">
-              <cursorShape>PointingHandCursor</cursorShape>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">QWidget#loadVideoButton {
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QFrame" name="frame_2">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>180</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>167777</width>
+        <height>180</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QWidget#frame_2 {
+	border: 0;
+}</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <widget class="QLineEdit" name="loadVideoLineEdit">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>28</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>28</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QWidget#loadVideoLineEdit {
+	border: 1px solid #BEBEBE;
+}</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="loadVideoButton">
+           <property name="minimumSize">
+            <size>
+             <width>110</width>
+             <height>28</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>110</width>
+             <height>28</height>
+            </size>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QWidget#loadVideoButton {
 	background: #fff;
 	border-radius: 6px;
 	border: 1px solid #BEBEBE;
@@ -149,56 +153,56 @@ QWidget#loadVideoButton:hover {
     color: #FFF;
 }
 </string>
-             </property>
-             <property name="text">
-              <string>Load Video</string>
-             </property>
-            </widget>
-           </item>
-          </layout>
+           </property>
+           <property name="text">
+            <string>Load Video</string>
+           </property>
+          </widget>
          </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_3">
          <item>
-          <layout class="QHBoxLayout" name="horizontalLayout_3">
-           <item>
-            <widget class="QLineEdit" name="setLinesLineEdit">
-             <property name="minimumSize">
-              <size>
-               <width>0</width>
-               <height>28</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>16777215</width>
-               <height>28</height>
-              </size>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">QWidget#setLinesLineEdit {
+          <widget class="QLineEdit" name="setLinesLineEdit">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>28</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>28</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QWidget#setLinesLineEdit {
 	border: 1px solid #BEBEBE;
 }</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QPushButton" name="setLinesButton">
-             <property name="minimumSize">
-              <size>
-               <width>110</width>
-               <height>28</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>110</width>
-               <height>28</height>
-              </size>
-             </property>
-             <property name="cursor">
-              <cursorShape>PointingHandCursor</cursorShape>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">QWidget#setLinesButton {
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="setLinesButton">
+           <property name="minimumSize">
+            <size>
+             <width>110</width>
+             <height>28</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>110</width>
+             <height>28</height>
+            </size>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QWidget#setLinesButton {
 	background: #fff;
 	border-radius: 6px;
 	border: 1px solid #BEBEBE;
@@ -208,56 +212,56 @@ QWidget#setLinesButton:hover {
 	background: #476dbe;
     color: #FFF;
 }</string>
-             </property>
-             <property name="text">
-              <string>Set Lines</string>
-             </property>
-            </widget>
-           </item>
-          </layout>
+           </property>
+           <property name="text">
+            <string>Set Lines</string>
+           </property>
+          </widget>
          </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
          <item>
-          <layout class="QHBoxLayout" name="horizontalLayout_2">
-           <item>
-            <widget class="QLineEdit" name="setAreaLlineEdit">
-             <property name="minimumSize">
-              <size>
-               <width>0</width>
-               <height>28</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>16777215</width>
-               <height>28</height>
-              </size>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">QWidget#setAreaLlineEdit {
+          <widget class="QLineEdit" name="setAreaLlineEdit">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>28</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>28</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QWidget#setAreaLlineEdit {
 	border: 1px solid #BEBEBE;
 }</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QPushButton" name="setAreaButton">
-             <property name="minimumSize">
-              <size>
-               <width>110</width>
-               <height>32</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>110</width>
-               <height>32</height>
-              </size>
-             </property>
-             <property name="cursor">
-              <cursorShape>PointingHandCursor</cursorShape>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">QWidget#setAreaButton {
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="setAreaButton">
+           <property name="minimumSize">
+            <size>
+             <width>110</width>
+             <height>32</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>110</width>
+             <height>32</height>
+            </size>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QWidget#setAreaButton {
 	background: #fff;
 	border-radius: 6px;
 	border: 1px solid #BEBEBE;
@@ -267,91 +271,91 @@ QWidget#setAreaButton:hover {
 	background: #476dbe;
     color: #FFF;
 }</string>
-             </property>
-             <property name="text">
-              <string>Set Area</string>
-             </property>
-            </widget>
-           </item>
-          </layout>
+           </property>
+           <property name="text">
+            <string>Set Area</string>
+           </property>
+          </widget>
          </item>
-         <item>
-          <widget class="QFrame" name="frame_3">
-           <property name="minimumSize">
-            <size>
-             <width>0</width>
-             <height>32</height>
-            </size>
-           </property>
-           <property name="maximumSize">
-            <size>
-             <width>16777215</width>
-             <height>32</height>
-            </size>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">QWidget#frame_3 {
+        </layout>
+       </item>
+       <item>
+        <widget class="QFrame" name="frame_3">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>32</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>32</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QWidget#frame_3 {
 	border: 0;
 }</string>
-           </property>
-           <property name="frameShape">
-            <enum>QFrame::StyledPanel</enum>
-           </property>
-           <property name="frameShadow">
-            <enum>QFrame::Raised</enum>
-           </property>
-           <layout class="QHBoxLayout" name="horizontalLayout_7">
-            <property name="leftMargin">
-             <number>0</number>
-            </property>
-            <property name="topMargin">
-             <number>0</number>
-            </property>
-            <property name="rightMargin">
-             <number>0</number>
-            </property>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_7">
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_6">
             <property name="bottomMargin">
-             <number>0</number>
+             <number>10</number>
             </property>
             <item>
-             <layout class="QHBoxLayout" name="horizontalLayout_6">
-              <property name="bottomMargin">
-               <number>10</number>
+             <spacer name="horizontalSpacer_2">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
               </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_4">
               <item>
-               <spacer name="horizontalSpacer_2">
-                <property name="orientation">
-                 <enum>Qt::Horizontal</enum>
-                </property>
-                <property name="sizeHint" stdset="0">
+               <widget class="QPushButton" name="startButton">
+                <property name="minimumSize">
                  <size>
-                  <width>40</width>
-                  <height>20</height>
+                  <width>80</width>
+                  <height>32</height>
                  </size>
                 </property>
-               </spacer>
-              </item>
-              <item>
-               <layout class="QHBoxLayout" name="horizontalLayout_4">
-                <item>
-                 <widget class="QPushButton" name="startButton">
-                  <property name="minimumSize">
-                   <size>
-                    <width>80</width>
-                    <height>32</height>
-                   </size>
-                  </property>
-                  <property name="maximumSize">
-                   <size>
-                    <width>16777215</width>
-                    <height>32</height>
-                   </size>
-                  </property>
-                  <property name="cursor">
-                   <cursorShape>PointingHandCursor</cursorShape>
-                  </property>
-                  <property name="styleSheet">
-                   <string notr="true">QWidget#startButton {
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>32</height>
+                 </size>
+                </property>
+                <property name="cursor">
+                 <cursorShape>PointingHandCursor</cursorShape>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QWidget#startButton {
 	background: #fff;
 	border-radius: 6px;
 	border: 1px solid #BEBEBE;
@@ -361,63 +365,14 @@ QWidget#startButton:hover {
 	background: #476dbe;
     color: #FFF;
 }</string>
-                  </property>
-                  <property name="text">
-                   <string>Start</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <spacer name="horizontalSpacer">
-                  <property name="orientation">
-                   <enum>Qt::Horizontal</enum>
-                  </property>
-                  <property name="sizeHint" stdset="0">
-                   <size>
-                    <width>40</width>
-                    <height>20</height>
-                   </size>
-                  </property>
-                 </spacer>
-                </item>
-                <item>
-                 <widget class="QPushButton" name="stopButton">
-                  <property name="minimumSize">
-                   <size>
-                    <width>80</width>
-                    <height>32</height>
-                   </size>
-                  </property>
-                  <property name="maximumSize">
-                   <size>
-                    <width>80</width>
-                    <height>32</height>
-                   </size>
-                  </property>
-                  <property name="cursor">
-                   <cursorShape>PointingHandCursor</cursorShape>
-                  </property>
-                  <property name="styleSheet">
-                   <string notr="true">QWidget#stopButton {
-	background: #fff;
-	border-radius: 6px;
-	border: 1px solid #BEBEBE;
-}
-QWidget#stopButton:hover {
-	border: 1px solid #476dbe;
-	background: #476dbe;
-    color: #FFF;
-}</string>
-                  </property>
-                  <property name="text">
-                   <string>Stop</string>
-                  </property>
-                 </widget>
-                </item>
-               </layout>
+                </property>
+                <property name="text">
+                 <string>Start</string>
+                </property>
+               </widget>
               </item>
               <item>
-               <spacer name="horizontalSpacer_3">
+               <spacer name="horizontalSpacer">
                 <property name="orientation">
                  <enum>Qt::Horizontal</enum>
                 </property>
@@ -429,15 +384,62 @@ QWidget#stopButton:hover {
                 </property>
                </spacer>
               </item>
+              <item>
+               <widget class="QPushButton" name="stopButton">
+                <property name="minimumSize">
+                 <size>
+                  <width>80</width>
+                  <height>32</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>80</width>
+                  <height>32</height>
+                 </size>
+                </property>
+                <property name="cursor">
+                 <cursorShape>PointingHandCursor</cursorShape>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QWidget#stopButton {
+	background: #fff;
+	border-radius: 6px;
+	border: 1px solid #BEBEBE;
+}
+QWidget#stopButton:hover {
+	border: 1px solid #476dbe;
+	background: #476dbe;
+    color: #FFF;
+}</string>
+                </property>
+                <property name="text">
+                 <string>Stop</string>
+                </property>
+               </widget>
+              </item>
              </layout>
             </item>
+            <item>
+             <spacer name="horizontalSpacer_3">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
            </layout>
-          </widget>
-         </item>
-        </layout>
-       </widget>
-      </item>
-     </layout>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
     </item>
    </layout>
   </widget>
@@ -446,7 +448,7 @@ QWidget#stopButton:hover {
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1142</width>
+     <width>1157</width>
      <height>24</height>
     </rect>
    </property>

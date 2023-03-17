@@ -15,22 +15,23 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QFont, QFontDatabase, QGradient, QIcon,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QFrame, QHBoxLayout, QLineEdit,
-    QMainWindow, QMenuBar, QPushButton, QSizePolicy,
-    QSpacerItem, QStatusBar, QVBoxLayout, QWidget)
+from PySide6.QtWidgets import (QApplication, QFrame, QHBoxLayout, QLabel,
+    QLineEdit, QMainWindow, QMenuBar, QPushButton,
+    QSizePolicy, QSpacerItem, QStatusBar, QVBoxLayout,
+    QWidget)
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(1142, 944)
+        MainWindow.resize(1157, 981)
         MainWindow.setStyleSheet(u"QWidget#MainWindow {\n"
 "	background: #fff;\n"
 "}")
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
-        self.horizontalLayout_5 = QHBoxLayout(self.centralwidget)
-        self.horizontalLayout_5.setObjectName(u"horizontalLayout_5")
+        self.verticalLayout_3 = QVBoxLayout(self.centralwidget)
+        self.verticalLayout_3.setObjectName(u"verticalLayout_3")
         self.verticalLayout = QVBoxLayout()
         self.verticalLayout.setObjectName(u"verticalLayout")
         self.lineEdit = QLineEdit(self.centralwidget)
@@ -43,13 +44,17 @@ class Ui_MainWindow(object):
 
         self.verticalLayout.addWidget(self.lineEdit)
 
-        self.videoFrame = QFrame(self.centralwidget)
-        self.videoFrame.setObjectName(u"videoFrame")
-        self.videoFrame.setMinimumSize(QSize(600, 400))
-        self.videoFrame.setFrameShape(QFrame.StyledPanel)
-        self.videoFrame.setFrameShadow(QFrame.Raised)
+        self.l_imageArea = QLabel(self.centralwidget)
+        self.l_imageArea.setObjectName(u"l_imageArea")
+        self.l_imageArea.setMinimumSize(QSize(400, 225))
+        self.l_imageArea.setStyleSheet(u"QWidget#l_imageArea {\n"
+"	border: 1px solid #BEBEBE;\n"
+"}")
 
-        self.verticalLayout.addWidget(self.videoFrame)
+        self.verticalLayout.addWidget(self.l_imageArea)
+
+
+        self.verticalLayout_3.addLayout(self.verticalLayout)
 
         self.frame_2 = QFrame(self.centralwidget)
         self.frame_2.setObjectName(u"frame_2")
@@ -238,15 +243,12 @@ class Ui_MainWindow(object):
         self.verticalLayout_2.addWidget(self.frame_3)
 
 
-        self.verticalLayout.addWidget(self.frame_2)
-
-
-        self.horizontalLayout_5.addLayout(self.verticalLayout)
+        self.verticalLayout_3.addWidget(self.frame_2)
 
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QMenuBar(MainWindow)
         self.menubar.setObjectName(u"menubar")
-        self.menubar.setGeometry(QRect(0, 0, 1142, 24))
+        self.menubar.setGeometry(QRect(0, 0, 1157, 24))
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QStatusBar(MainWindow)
         self.statusbar.setObjectName(u"statusbar")
@@ -264,6 +266,7 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"\u4e3b\u7a97\u53e3", None))
+        self.l_imageArea.setText("")
         self.loadVideoButton.setText(QCoreApplication.translate("MainWindow", u"Load Video", None))
         self.setLinesButton.setText(QCoreApplication.translate("MainWindow", u"Set Lines", None))
         self.setAreaButton.setText(QCoreApplication.translate("MainWindow", u"Set Area", None))
